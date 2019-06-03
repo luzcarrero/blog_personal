@@ -67,12 +67,18 @@ if (isset($_POST) && !empty($_POST)) {
                         if ($admin['permiso'] == 1) {
                             echo  "<li class='active'><a href='altaActividades.php'>añadir curso <i class='fas fa-edit'></i></a></li>";
                             echo  " <li> <a href='gestionUsuarios.php' role='button'>Gestionar Usuarios</a></li>";
+                            echo  " <li> <a href='enviarMensajes.php' role='button'>Nuevo mensaje <span class='glyphicon'>&#x270f;</span></a></li>";
+                            echo  " <li> <a href='enviados.php' role='button'>Enviados<span class='glyphicon'>&#xe013;</span></a></li>";
+                            echo  " <li> <a href='leerMensajes.php' role='button'>Recibidos <span class='glyphicon'>&#x2709;</span></a></li>";
                         }   
                                  
 
                         if (isset($_SESSION) && !empty($_SESSION) && $admin['permiso'] != 1) {
                             echo  "<li class='active'><a href='misCursos.php' method='post'>mis cursos 
                                 <i class='fas fa-laptop-code'></i></a></li>";
+                                echo  " <li> <a href='enviarMensajes.php' role='button'>Nuevo mensaje <span class='glyphicon'>&#x270f;</span></a></li>";
+                                echo  " <li> <a href='enviados.php' role='button'>Enviados<span class='glyphicon'>&#xe013;</span></a></li>";
+                                echo  " <li> <a href='leerMensajes.php' role='button'><span class='glyphicon'>&#x2709;</span></a></li>";
                         }
                         ?>
                     </ol>

@@ -19,12 +19,12 @@ class ListarCursos
     {
         $conexion = new Bd($this->tabla);
 
-        $sql = "SELECT * FROM " . $this->tabla;
+        $sql = "SELECT * FROM " . $this->tabla . " WHERE visible = 0";
 
         $res = $conexion->consulta($sql);
 
-        while (list($id, $titulo, $descripcion, $ruta) = mysqli_fetch_array($res)) {
-            $fila = new Curso($id, $titulo, $descripcion, $ruta);
+        while (list($id, $titulo, $descripcion, $ruta , $visible) = mysqli_fetch_array($res)) {
+            $fila = new Curso($id, $titulo, $descripcion, $ruta , $visible);
             array_push($this->lista, $fila);
         }
     }
@@ -62,17 +62,19 @@ class Curso
     private $titulo;
     private $descripcion;
     private $ruta;
+    private $visible;
 
 
     private $tabla;
 
-    public function __construct($id = "", $titulo = "", $descripcion = "", $ruta = "")
+    public function __construct($id = "", $titulo = "", $descripcion = "", $ruta = "", $visible="")
     {
 
         $this->id = $id;
         $this->titulo = $titulo;
         $this->descripcion = $descripcion;
         $this->ruta = $ruta;
+        $this->visible=$visible;
 
         $this->tabla = "cursos";
     }
@@ -132,8 +134,19 @@ class Curso
     {
         $this->ruta = $ruta;
     }
+    
+    public function getVisible()
+    {
+
+        return $this->visible;
+    }
 
 
+    public function setVisible($visible)
+    {
+        $this->rvisibleuta = $visible;
+    }
+    
     public function obtenerPorID($id)
     {
 
@@ -161,13 +174,13 @@ class Curso
     }
 
     /**
-     * metodo para eliminar usuarios 
+     * metodo para eliminar cursos 
      */
     public function eliminaCurso()
     {
         $bd = new Bd($this->tabla);
         $sql = "DELETE FROM usuarios WHERE id=" . $_GET['id'];
-        print_r($sql);
+     
         $resultado = $bd->consulta($sql);
         if ($resultado == true) {
             header('location: gestionUsuarios.php');
@@ -175,30 +188,15 @@ class Curso
     }
 
     /**
-     * metodo para editar usuario
+     * metodo que elimina los cursos asociados a usuarios
      */
-    public function editar($id, $datos)
+    public function eliminarCursoAdmin($id)
     {
-        $sql = new Bd($this->tabla);
-        $sentencias = array();
 
-        foreach ($datos as $campo => $valor) {
-            if ($campo != "id" && $campo != "x" && $campo != "y") {
-                $sentencias[] = $campo . "='" . addslashes($valor) . "'";
-            }
-        }
-
-        $campos = implode(",", $sentencias);
-        $act = "UPDATE " . $this->tabla . " SET " . $campos . " WHERE id=" . $id;
-
-        $sql->consulta($act);
-    }
-
-    public function eliminar($id)
-    {
         $conexion = new Bd($this->tabla);
-        $sql = "DELETE FROM " . $this->tabla . " WHERE id=".$id;
+        $sql = "UPDATE " . $this->tabla . " SET visible= 1 WHERE id=".$id;        
         $res = $conexion->consulta($sql);
+
         
     }
 
@@ -214,7 +212,7 @@ class Curso
             "<div class='contenedor-botones'>" .
             " <a href='#' class='btn btn-primary'>Leer mas</a>" .
             "<a href='#' class='btn btn-success'>Comentarios <span class='badge'>50<span></a>" .
-            "<a class='btn' href='añadir_curso.php?id=" . $this->id . "'>Añadir Curso</a>" .
+            "<a class='btn' href='añadir_curso.php?id=" . $this->id . "'>Guardar <span class='glyphicon'>&#xe142;</span></a>" .
             "</div>";
 
         return $txt;

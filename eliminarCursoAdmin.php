@@ -6,7 +6,8 @@ require_once "clases/Curso.php";
 
 $Eliminado=new Curso();
 $id=$_GET['id'];
-$Eliminado->eliminar($id);
+
+$Eliminado->eliminarCursoAdmin($id);
 
 
 header("location: inicio.php");

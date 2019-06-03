@@ -30,7 +30,7 @@ class Bd
 
     public function insertar($tabla, $datos)
     {
-        print_r($tabla);
+    
         $claves  = array();
         $valores = array();
 

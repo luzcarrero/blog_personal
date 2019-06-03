@@ -47,7 +47,7 @@ if (isset($_POST) && !empty($_POST)) {
             <div class="card-body">
                 <form name="acceso" action="<?php echo $_SERVER['PHP_SELF']?>"  method="post">              
                         <input type="mail" name="mail" class="form-control" placeholder="correro">
-                        <input type="text" name="clave" class="form-control" placeholder="password">
+                        <input type="password" name="clave" class="form-control" placeholder="password">
 
                     <div class="row align-items-center remember">
                         <input type="checkbox">Remember Me

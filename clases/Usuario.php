@@ -36,7 +36,6 @@ class ListarUsuarios
         "<th scope='col'>Nombre</th>".
         "<th scope='col'>Mail</th>".
         "<th scope='col'>Clave</th>".
-        "<th scope='col'>Permiso</th>".
         "<th scope='col'>Editar</th>".
         "<th scope='col'>Eliminar</th>";
         ;
@@ -327,13 +326,11 @@ class Usuario
         "<td scope='row'>".$this->id."</td>".
         "<td>".$this->nombre."</td>".
         "<td>".$this->mail."</td>".
-        "<td>".$this->permiso."</td>".
         "<td>".$this->clave."</td>".
-        "<td><a href='registro.php?id=" . $this->id . "'> <i class='fas fa-sync'></i></td>".
-        "<td><a href='eliminar.php?id=" . $this->id . "'>
-            <i class='fas fa-trash-alt'></i></a></td>".
-    "</tr>"
-    ."</div>";
+        "<td><a href='registro.php?id=" . $this->id . "'> editar<i class='fas fa-sync'></i></td>".
+        "<td><a href='eliminarUsuario.php?id=" . $this->id . "'> Borrar<i class='fas fa-trash-alt'></i></a></td>".
+        "</tr>"
+        ."</div>";
     return $txt;
 
     }

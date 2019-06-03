@@ -59,8 +59,8 @@
                         </ul>
                     </li>
                     <li class="" >
-                        <a href="acceso.php" class=""  role="button">
-                                iniciar sesion
+                        <a href="registro.php" class=""  role="button">
+                                registrarme
                         </a>
 
                     </li>
@@ -182,36 +182,29 @@
         <i><h1>"Sí quieres que haga un articulo sobre un tema en el que te pueda ayudar
             hazmelo saber y con gusto te ayudare"</h1></i>
 
-            <form action="#">
-            <div>
-            <label>Nombre</label>
-            <input type="text" name="nombre" >
-            </div>
-
-            <div>
-            <label>Apellido</label>
-            <input type="text" name="apellido">
-            </div>
-
-            <div>
-            <label>E-mail</label>
-            <input type="email" name="email">
-            </div>
-
-            <div>
-            <label style="display: block;
-    text-align: left;
-    margin: 0px auto;
-    width: 30%;">Mensaje: </label>
-            <textarea name="comentario" id="" cols="30" rows="10"></textarea>
-            </div>
-           
-            </form>
-
-    </div>
+    </div>  
 
 </section>
+        <form class="main container">
+        <div class="form-group main">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+                <div class="form-group">
+                </div>
+                <div class="form-group">
+                <label for="exampleFormControlTextarea1" type="hidden" name="id">id</label>
+                <label for="exampleFormControlTextarea1" type="para">Example textarea</label>
+                <label for="exampleFormControlTextarea1">Example textarea</label>
+                <label for="exampleFormControlTextarea1">Example textarea</label>                
+                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                   <br>
+               <input type="submit" value="enviar" class="  btn btn-primary btn-lg mb-2">
+                </div>
+                </form>
 
+            </div>
 
 
 

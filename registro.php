@@ -30,9 +30,7 @@ if (isset($_POST) && !empty($_POST)) {
     $usuario->registro($_POST);
     header("location: inicio.php");    
 }
-//  else{
-//    lanzaError("no se registro correctamente");
-// }
+
 
 ?>
 
@@ -70,7 +68,7 @@ if (isset($_POST) && !empty($_POST)) {
                     <input type="hidden" name="id" class="form-control" placeholder="id" value="<?php  echo $usuario->getId() ?>">    
                     <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="<?php  echo $usuario->getNombre() ?>"required>
                     <input type="text" name="mail" class="form-control" placeholder="correo" value="<?php  echo $usuario->getCorreo() ?>" required>
-                    <input type="text" name="clave" class="form-control" placeholder="contraseña" value="<?php  echo $usuario->getClave() ?>">
+                    <input type="password" name="clave" class="form-control" placeholder="contraseña" value="<?php  echo $usuario->getClave() ?>">
                     <div class="row align-items-center remember">
                         <input type="checkbox">Recordarme
                     </div>
