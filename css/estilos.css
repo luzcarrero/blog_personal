@@ -1,0 +1,158 @@
+* {
+    font-family: sans-serif;
+}
+
+nav {
+    background-color: black;
+}
+
+
+/*HEADER
+ el navbar es el que me agrega el espaciado entre el margen y el jumbotrom*/
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-brand img {
+    display: inline-block;
+}
+
+
+/*accedemos a la clase jumbotron en este caso como solo hay uno usamos
+ esa directamente para mas jumbotrones usamos otras clases para que
+el mismo estilo no se aplique a todos*/
+
+.jumbotron {
+    background-color: #33acb7;
+    padding: 20px 0;
+    color: #ffffff;
+}
+
+
+/*estilos de la section "main" le agregamos margenes*/
+
+.main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.fa-star {
+    color: blueviolet;
+}
+
+.fa-star span {
+    color: black;
+}
+
+
+/*estilos para los articulos de la clase post*/
+
+.post {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.post .post-title a {
+    color: #363636;
+}
+
+.post .thumb {
+    margin-right: 10px;
+    width: 40%;
+    float: left;
+}
+
+
+/*para ajustar el tamaño de la imagen a la izquierda*/
+
+.post .thumb img {
+    width: 100%;
+}
+
+
+/*estilos de los botones le damos un with del 100% para ajustarlos */
+
+.post .contenedor-botones {
+    width: 100%;
+}
+
+.conteLog {
+    width: 10%;
+}
+
+.log {
+    width: 100%;
+}
+
+
+/*Media queie para ajustar el responsive de las imagenes */
+
+@media screen and (max-width: 768px) {
+    .post .thumb {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+}
+
+
+/*estilos pagina sobre mi*/
+
+.caja {
+    width: 100%;
+    display: flex;
+    align-content: center;
+}
+
+.cajita-uno {
+    width: 75%;
+    height: 300px;
+    text-align: justify;
+    margin: 0px auto;
+}
+
+.cajita-dos {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background-color: #33ACB7;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    border-radius: 15px 15px 15px 15px;
+}
+
+.cajita-dos img {
+    width: 100%;
+    height: 100%;
+}
+
+.cajita-dos h2 {
+    margin-top: 5%;
+}
+
+.biografia {
+    text-align: justify;
+}
+
+.pie-sobremi {
+    background-color: black;
+    color: white;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+}
+
+.pie-sobremi a {
+    text-decoration: none;
+}
+
+
+/*mini formu de las personas que me contacten*/
+
+.contactame {
+    width: 100%;
+    display: inline;
+    text-align: center;
+}

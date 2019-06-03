@@ -1,0 +1,97 @@
+.caja{
+    justify-content: center;
+    height: -100px;
+    display: flex;
+}
+body{
+    background-color: #ffff00;
+}
+html,body{
+    background-image: url("../img/binario.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+.card-header{
+    margin-left: 15%;
+    color: #ffffff;
+}
+span{
+    margin: 2px;
+}
+.card{
+    height: 370px;
+    margin-top: 10%;
+    margin-bottom: auto;
+    width: 300px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(0,0,0,0.5) !important;
+    display: inline;
+}
+.row{
+    margin-left: 10%;
+    margin-bottom: 15px;
+
+}
+.redes_sociales {
+    display:flex;
+}
+
+.form-control{
+    width: 75%;
+    margin: 15px auto;
+}
+.form-group{
+    text-align: center;
+}
+input:focus{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+    color: white;
+}
+
+.remember input
+{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.login_btn{
+    color: black;
+    background-color:#ffbeb8;;
+    width: 100px;
+}
+.boton{
+    width: 70px;
+    height: 25px;
+    line-height: 35px;
+    margin: 0px auto;
+    list-style: none;
+    border-radius: 3px;
+    font-style: none;
+    background-color: #ff2f82;
+    font: inherit;
+    border: #ff2f82;
+}
+.boton a{
+    color: #ffffff;
+}
+.boton:hover{
+    background-color: #913495;
+}
+.links{
+    color: white;
+    display: flex;
+    justify-content:center;
+}
+
+.links a{
+    margin-left: 4px;
+}
